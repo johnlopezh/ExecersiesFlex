@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+.body {
+    font-family: $fuente_principal;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.oculto {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        padding: 1.4rem 0;
+    }
+}
+
+.carrito-compras {
+    position: relative;
+    &:hover .contenido {
+        position: absolute;
+        right: 0;
+        display: block;
+        background-color: $gris;
+        padding: 1rem;
+        max-width: 400px;
+        img {
+            max-width: 150px;
+        }
+        .boton {
+            @include boton($principal);
+        }
+    }
+}
