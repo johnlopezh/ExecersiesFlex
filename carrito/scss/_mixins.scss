@@ -9,3 +9,7 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}

@@ -1,5 +1,15 @@
 @import 'variables';
 @import 'mixins';
+html {
+    @include box-sizing(border-box);
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+
 .body {
     font-family: $fuente_principal;
 }
@@ -38,4 +48,8 @@
             @include boton($principal);
         }
     }
+}
+
+.hero {
+    background-image: url(../img/hero.jpg);
 }
